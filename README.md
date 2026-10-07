@@ -6,7 +6,7 @@
 
 This list is maintained by the GPTBot.uz team in Tashkent. GPTBot.uz is an independent AI chat service and is not affiliated with OpenAI. To keep the list fair, it links to our own pages no more than three times, and each of those entries is marked "Disclosure". Other services, including our competitors, are listed on the same terms, and suggestions are welcome.
 
-Links and facts were last checked on 7 October 2026. Plans, prices and language support change often, so check each site before relying on it.
+Links were last checked on 7 October 2026; descriptions are taken from each site's own pages. Plans, prices and language support change often, so check each site before relying on it.
 
 ## Contents
 
@@ -50,10 +50,10 @@ Services that work in Uzbek, from international products with Uzbek support to t
 
 - [ChatGPT](https://chatgpt.com/) - OpenAI's assistant. Uzbekistan is on OpenAI's supported-countries list, and it can read and write Uzbek in Latin or Cyrillic script. Freemium.
 - [Claude](https://claude.ai/) - Anthropic's assistant, available in Uzbekistan. It can work with Uzbek text, but Uzbek is not among the languages in Anthropic's published multilingual benchmarks. Requires an account. Freemium.
-- [Gemini](https://gemini.google.com/) - Google's assistant. Google announced official Uzbek support in the Gemini app in November 2025, and Uzbek appears in its supported-languages list. Freemium.
+- [Gemini](https://gemini.google.com/) - Google's assistant. Uzbek is on Gemini's supported-languages list. Freemium.
 - [GPTBot.uz](https://gptbot.uz/uz/gpt-uzbek-tilida/) - Browser AI chat in Uzbek (Latin) and Russian that works without sign-up. Text only, with a daily free limit and an optional paid package; answers come from third-party models through an API. Built by an independent team in Tashkent; it is not ChatGPT and is not affiliated with OpenAI. Disclosure: maintained by the GPTBot.uz team, which also maintains this list. Freemium.
 - [Qwen Chat](https://chat.qwen.ai/) - Alibaba's chat assistant, usable without logging in. The Qwen3 model family lists Northern Uzbek among its 119 supported languages. Free.
-- [Yandex Alisa](https://alice.yandex.uz/uz/) - Yandex's voice assistant has spoken Uzbek and Russian on Yandex smart speakers since September 2025. To turn it on, choose the O‘zbekcha + Ruscha option in the Dom s Alisoy app settings. Requires a Yandex smart speaker.
+- [Yandex Alisa](https://alice.yandex.uz/uz/) - Yandex's voice assistant speaks Uzbek and Russian on Yandex smart speakers. To turn it on, choose the O‘zbekcha + Ruscha option in the Dom s Alisoy app settings. Requires a Yandex smart speaker.
 
 ### Translation
 
@@ -73,7 +73,7 @@ Services that work in Uzbek, from international products with Uzbek support to t
 - [Muxlisa AI](https://muxlisa.uz/uz) - Speech-to-text and text-to-speech platform from the state IT company UZINFOCOM, with Uzbek and Karakalpak support. It has an online demo, an API and a meeting notetaker, and its voice interface is used in the MyGov chatbot. Free minutes on sign-up, then paid per minute.
 - [Narakeet](https://www.narakeet.com/languages/uzbek-text-to-speech-uz/) - Turns text, slides and scripts into Uzbek voice-overs and narrated videos in the browser. Free trial, then paid.
 - [OpenAI Whisper](https://github.com/openai/whisper) - Open-source multilingual speech recognition model that runs on your own computer. Uzbek is one of its languages; it is a general-purpose model, so test its accuracy on your own Uzbek recordings. Open source.
-- [UzbekVoiceAI](https://uzbekvoice.ai/) - Uzbek and mixed Uzbek-Russian speech-to-text, plus text-to-speech in neutral, happy, angry and sad styles. UzbekVoice Studio adds subtitles and dubbing. Made by the MohirAI team. Paid, with a 10,000 so‘m bonus on sign-up.
+- [UzbekVoiceAI](https://uzbekvoice.ai/) - Uzbek and mixed Uzbek-Russian speech-to-text, plus text-to-speech with the Shoira and Jasur voices. UzbekVoice Studio adds subtitles and dubbing. Made by the MohirAI team. Paid, with a sign-up bonus (see site).
 - [Yandex SpeechKit](https://aistudio.yandex.ru/en/ai-speech) - Yandex's cloud speech API. It has an Uzbek (uz-UZ) recognition model and three Uzbek text-to-speech voices: Nigora, Zamira and Yulduz. Paid API.
 
 ### Text Recognition (OCR)
@@ -154,7 +154,7 @@ Open models for Uzbek: Northern Uzbek in Latin and Cyrillic script, plus some So
 - [UzbekStemmer](https://github.com/MaksudSharipov/UzbekStemmer) - Lexicon-free rule-based stemmer for Uzbek. License: MIT-style (see repository).
 - [UzMorphAnalyser](https://github.com/UlugbekSalaev/UzMorphAnalyser) - Affix-based morphological analyser for Uzbek (stemming, lemmatization, analysis). License: MIT.
 - [UzTransliterator](https://github.com/UlugbekSalaev/UzTransliterator) - Python package for transliteration between Cyrillic, current Latin and the proposed new Latin Uzbek alphabets, combining rules and statistics. License: MIT.
-- [UzWordnet](https://github.com/LDKR-Group/UzWordnet) - Lexical-semantic database for Uzbek, compatible with Princeton WordNet ([paper](https://aclanthology.org/2021.gwc-1.2/)). License not stated in the repository.
+- [UzWordnet](https://github.com/LDKR-Group/UzWordnet) - Lexical-semantic database for Uzbek, compatible with Princeton WordNet ([paper](https://aclanthology.org/2021.gwc-1.2/)). License: CC BY-SA 4.0 (derived from Princeton WordNet under the WordNet License).
 
 ## Datasets
 
@@ -233,9 +233,12 @@ Where to learn AI in Uzbek. Paid resources are marked as paid.
 
 ### Guides in Uzbek
 
-- [ChatGPT talabalar uchun: 20 usul va promptlar](https://gptbot.uz/uz/blog/chatgpt-talabalar-uchun/) - Uzbek guide to studying with an AI chat (explaining topics, notes, test practice, translation, fact-checking) with academic-honesty rules. Disclosure: maintained by the GPTBot.uz team; GPTBot.uz is an independent service, not affiliated with OpenAI.
+- [ChatGPT talabalar uchun: 20 usul va promptlar](https://gptbot.uz/uz/blog/chatgpt-talabalar-uchun/) - Uzbek guide to studying with an AI chat (explaining topics, notes, test practice, translation, fact-checking) with academic-honesty rules; the methods work with any AI chat, not only ChatGPT. Disclosure: maintained by the GPTBot.uz team; GPTBot.uz is an independent service, not affiliated with OpenAI.
 - [ChatGPT uchun o‘zbek tilida 50 ta tayyor prompt](https://gptbot.uz/uz/blog/chatgpt-uzbek-tilida-promptlar/) - 50 ready-to-adapt Uzbek prompts for study, work, marketing, sales and everyday tasks; they work in any AI chat. Disclosure: maintained by the GPTBot.uz team.
+- [Neyrotarmoqlar uchun promptlar: ChatGPT va boshqa neyron tarmoqlar](https://mohirdev.uz/blog/neyrotarmoqlar-uchun-promptlar-chatgpt-va-boshqa-neyron-tarmoqlarga-sorovlarni-qanday-yozish-kerak/) - Long Uzbek guide from Mohirdev (2024) on writing prompts for ChatGPT and for image and video generators (Midjourney, Stable Diffusion, Shedevrum, Kandinsky), with worked examples.
 - [O‘qituvchilar uchun 12 ta sun’iy intellekt vositasi](https://abt.uz/blog/oqituvchilar-uchun-talimni-yaxshilovchi-12-ta-eng-samarali-suniy-intellekt-vositasi) - Uzbek article for teachers on 12 AI tools for lesson planning and classroom work, published by abt.uz.
+- [O‘qituvchilar uchun ChatGPT](https://mohirdev.uz/blog/Oqituvchilar-uchun-ChatGPT/) - Mohirdev article (2025) for school teachers on using ChatGPT to save time on lesson plans, assignments and assessment, with example prompts in Uzbek.
+- [Prompt engineering: TOP tavsiyalar](https://mohirdev.uz/blog/Prompt-Engineering-nega-kerak/) - Mohirdev explainer (2025) of what prompt engineering is and why it matters, with practical techniques for talking to AI models and using them for coding; it cites Google's prompt-engineering whitepaper.
 - [Sun’iy intellekt (O‘zbekcha Vikipediya)](https://uz.wikipedia.org/wiki/Sun%CA%BCiy_intellekt) - Uzbek Wikipedia overview of AI; the longer [Generativ sun’iy intellekt](https://uz.wikipedia.org/wiki/Generativ_sun%CA%BCiy_intellekt) article covers generative models. Both are open for anyone to improve.
 
 ### Video Lessons
