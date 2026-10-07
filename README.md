@@ -2,7 +2,7 @@
 
 > A curated list of artificial intelligence resources for the Uzbek language: apps that work in Uzbek, open models and datasets, NLP tools, benchmarks, and places to learn and meet the community.
 
-**O‘zbekcha:** Bu ro‘yxatda o‘zbek tili uchun sun’iy intellekt resurslari jamlangan: o‘zbek tilida ishlaydigan ilovalar, ochiq modellar va ma’lumotlar to‘plamlari, NLP vositalari, benchmarklar, o‘quv materiallari va hamjamiyatlar. Ro‘yxat ingliz tilida yuritiladi. Yangi manba taklif qilmoqchi bo‘lsangiz, [hissa qo‘shish qoidalari](CONTRIBUTING.md) bilan tanishing.
+**O‘zbekcha:** Bu ro‘yxatda o‘zbek tili uchun sun’iy intellekt resurslari jamlangan: o‘zbek tilida ishlaydigan ilovalar, ochiq modellar va ma’lumotlar to‘plamlari, NLP vositalari, benchmarklar, o‘quv materiallari va hamjamiyatlar. Ro‘yxat ingliz tilida yuritiladi. Yangi manba taklif qilmoqchi bo‘lsangiz, [hissa qo‘shish qoidalari](#contributing) bilan tanishing.
 
 This list is maintained by the GPTBot.uz team in Tashkent. GPTBot.uz is an independent AI chat service and is not affiliated with OpenAI. To keep the list fair, it links to our own pages no more than three times, and each of those entries is marked "Disclosure". Other services, including our competitors, are listed on the same terms, and suggestions are welcome.
 
@@ -53,7 +53,7 @@ Services that work in Uzbek, from international products with Uzbek support to t
 - [Gemini](https://gemini.google.com/) - Google's assistant. Google announced official Uzbek support in the Gemini app in November 2025, and Uzbek appears in its supported-languages list. Freemium.
 - [GPTBot.uz](https://gptbot.uz/uz/gpt-uzbek-tilida/) - Browser AI chat in Uzbek (Latin) and Russian that works without sign-up. Text only, with a daily free limit and an optional paid package; answers come from third-party models through an API. Built by an independent team in Tashkent; it is not ChatGPT and is not affiliated with OpenAI. Disclosure: maintained by the GPTBot.uz team, which also maintains this list. Freemium.
 - [Qwen Chat](https://chat.qwen.ai/) - Alibaba's chat assistant, usable without logging in. The Qwen3 model family lists Northern Uzbek among its 119 supported languages. Free.
-- [Yandex Alisa](https://alice.yandex.uz/uz/) - Yandex's voice assistant has spoken Uzbek and Russian on Yandex smart speakers since September 2025. To turn it on, choose "O‘zbekcha + Ruscha" in the Dom s Alisoy app settings. Requires a Yandex smart speaker.
+- [Yandex Alisa](https://alice.yandex.uz/uz/) - Yandex's voice assistant has spoken Uzbek and Russian on Yandex smart speakers since September 2025. To turn it on, choose the O‘zbekcha + Ruscha option in the Dom s Alisoy app settings. Requires a Yandex smart speaker.
 
 ### Translation
 
