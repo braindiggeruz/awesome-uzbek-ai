@@ -2,11 +2,18 @@
 
 > A curated list of artificial intelligence resources for the Uzbek language: apps that work in Uzbek, open models and datasets, NLP tools, benchmarks, and places to learn and meet the community.
 
-**O‘zbekcha:** Bu ro‘yxatda o‘zbek tili uchun sun’iy intellekt resurslari jamlangan: o‘zbek tilida ishlaydigan ilovalar, ochiq modellar va ma’lumotlar to‘plamlari, NLP vositalari, benchmarklar, o‘quv materiallari va hamjamiyatlar. Ro‘yxat ingliz tilida yuritiladi. Yangi manba taklif qilmoqchi bo‘lsangiz, [hissa qo‘shish qoidalari](#contributing) bilan tanishing.
+[English](README.md) · [O‘zbekcha to‘liq ro‘yxat](README.uz.md) · [Website](https://braindiggeruz.github.io/awesome-uzbek-ai/)
 
-This list is maintained by the GPTBot.uz team in Tashkent. GPTBot.uz is an independent AI chat service and is not affiliated with OpenAI. To keep the list fair, it links to our own pages no more than three times, and each of those entries is marked "Disclosure". Other services, including our competitors, are listed on the same terms, and suggestions are welcome.
+This list is maintained by the GPTBot.uz team in Tashkent. GPTBot.uz is an independent AI chat service and is not affiliated with OpenAI. The catalog contains three entries linking to the team's own resources, each marked "Disclosure". A relevant tool may also appear in a guide with its own disclosure. Competitors are included on the same terms; ownership is not a ranking signal.
 
-Links were last checked on 7 October 2026; descriptions are taken from each site's own pages. Plans, prices and language support change often, so check each site before relying on it.
+Provider descriptions are starting points, not independent quality ratings. Some descriptions were collected for the initial October 2026 release and have not been revalidated in this update. Prices, access, licenses and language support can change. A successful HTTP check only confirms a response, not the accuracy or safety of a resource. See the [review record](data/reviews.json) for specifically documented content checks and the [maintenance guide](MAINTENANCE.md) for check semantics.
+
+## Start Here
+
+- **Students and educators:** start with [learning resources](#learning), then use the [selection guide](guides/choosing-uzbek-ai.md) to check language quality and sources. Review generated facts before using them in coursework.
+- **Writers and creators:** compare [writing tools](#writing-tools), [translation](#translation) and [speech tools](#speech-to-text-and-text-to-speech) on the same short, non-sensitive sample.
+- **Developers and researchers:** explore [models](#language-models), [datasets](#datasets) and the original [24-case Uzbek evaluation pack](evaluations/README.md). The pack is a reproducible smoke test with no model scores published.
+- **Business teams:** use the [Telegram bot launch checklist](guides/telegram-bot-checklist.md) before connecting customer data, payments or an AI provider. Check retention, human escalation and full running costs.
 
 ## Contents
 
@@ -44,14 +51,14 @@ Links were last checked on 7 October 2026; descriptions are taken from each site
 
 ## Apps and Services
 
-Services that work in Uzbek, from international products with Uzbek support to tools built in Uzbekistan. Pricing labels: *Free*, *Freemium* (free tier plus paid plans), *Paid* and *Open source*. International chatbots usually write Uzbek less well than English or Russian, so check important texts with a spell checker such as Tahrirchi.
+Services that work in Uzbek, from international products with Uzbek support to tools built in Uzbekistan. Pricing labels: *Free*, *Freemium* (free tier plus paid plans), *Paid* and *Open source*. Language quality varies by product, model and task. Test the same Uzbek examples across candidates and have an Uzbek speaker review important texts.
 
 ### AI Chats and Assistants
 
 - [ChatGPT](https://chatgpt.com/) - OpenAI's assistant. Uzbekistan is on OpenAI's supported-countries list, and it can read and write Uzbek in Latin or Cyrillic script. Freemium.
 - [Claude](https://claude.ai/) - Anthropic's assistant, available in Uzbekistan. It can work with Uzbek text, but Uzbek is not among the languages in Anthropic's published multilingual benchmarks. Requires an account. Freemium.
 - [Gemini](https://gemini.google.com/) - Google's assistant. Uzbek is on Gemini's supported-languages list. Freemium.
-- [GPTBot.uz](https://gptbot.uz/uz/gpt-uzbek-tilida/) - Browser AI chat in Uzbek (Latin) and Russian that works without sign-up. Text only, with a daily free limit and an optional paid package; answers come from third-party models through an API. Built by an independent team in Tashkent; it is not ChatGPT and is not affiliated with OpenAI. Disclosure: maintained by the GPTBot.uz team, which also maintains this list. Freemium.
+- [GPTBot.uz](https://gptbot.uz/uz/gpt-uzbek-tilida/) - Browser AI chat in Uzbek (Latin) and Russian that works without sign-up. Text answers come from third-party models through an API. Check the provider for current access, trial limits and paid terms; its published limit descriptions have conflicted. Built by an independent team in Tashkent; it is not ChatGPT and is not affiliated with OpenAI. Disclosure: maintained by the GPTBot.uz team, which also maintains this list. Pricing: check provider.
 - [Qwen Chat](https://chat.qwen.ai/) - Alibaba's chat assistant, usable without logging in. The Qwen3 model family lists Northern Uzbek among its 119 supported languages. Free.
 - [Yandex Alisa](https://alice.yandex.uz/uz/) - Yandex's voice assistant speaks Uzbek and Russian on Yandex smart speakers. To turn it on, choose the O‘zbekcha + Ruscha option in the Dom s Alisoy app settings. Requires a Yandex smart speaker.
 

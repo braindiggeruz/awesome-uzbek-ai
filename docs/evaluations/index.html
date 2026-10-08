@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uzbek AI evaluation pack: 24 reproducible smoke tests</title>
+<meta name="description" content="Original Uzbek Latin, Cyrillic, mixed-language and business test cases with a transparent rubric and no invented model scores.">
+<link rel="canonical" href="https://braindiggeruz.github.io/awesome-uzbek-ai/evaluations/">
+
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Uzbek AI evaluation pack: 24 reproducible smoke tests">
+<meta property="og:description" content="Original Uzbek Latin, Cyrillic, mixed-language and business test cases with a transparent rubric and no invented model scores.">
+<meta property="og:url" content="https://braindiggeruz.github.io/awesome-uzbek-ai/evaluations/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "name": "Uzbek AI evaluation pack: 24 reproducible smoke tests", "description": "Original Uzbek Latin, Cyrillic, mixed-language and business test cases with a transparent rubric and no invented model scores.", "url": "https://braindiggeruz.github.io/awesome-uzbek-ai/evaluations/", "inLanguage": "en", "license": "https://creativecommons.org/publicdomain/zero/1.0/"}</script>
+<style>:root{--bg:#fbfbf8;--fg:#1d1f1e;--muted:#525b55;--line:#d5ddd5;--link:#075e8c;--accent:#08684f;--code:#edf1eb}
+@media(prefers-color-scheme:dark){:root{--bg:#141716;--fg:#e8ebe7;--muted:#b3bcb5;--line:#414c43;--link:#8bcdf4;--accent:#6ad7ad;--code:#252e28}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-padding-top:1rem}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+main,.topbar{max-width:58rem;margin:0 auto;padding:1.25rem}main{padding-bottom:3rem}.topbar{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;border-bottom:1px solid var(--line)}.topbar a{padding:.25rem 0}.topbar [aria-current]{font-weight:700}
+h1{font-size:2.1rem;line-height:1.2;margin:.8rem 0 1rem}h2{font-size:1.45rem;margin-top:2.5rem;border-top:1px solid var(--line);padding-top:.8rem}h3{font-size:1.15rem;margin-top:1.8rem;color:var(--accent)}p,li,h1,h2,h3{overflow-wrap:anywhere}a{color:var(--link);text-underline-offset:.18em}a:hover{text-decoration-thickness:.15em}a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);outline-offset:4px}ul,ol{padding-left:1.4rem}li{margin:.5rem 0}li li{margin:.25rem 0}code{font:.9em ui-monospace,monospace;background:var(--code);padding:.1em .3em;border-radius:3px}pre{overflow:auto;padding:1rem;background:var(--code);border-radius:6px}pre code{padding:0}blockquote{margin:1rem 0;padding:.1rem 1rem;border-left:3px solid var(--accent);color:var(--muted)}.table-wrap{overflow-x:auto}table{border-collapse:collapse;min-width:100%}th,td{text-align:left;vertical-align:top;border:1px solid var(--line);padding:.6rem}th{background:var(--code)}footer{margin-top:3rem;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}.skip{position:absolute;left:1rem;top:-10rem;background:var(--bg);padding:.6rem;z-index:2}.skip:focus{top:.5rem}.meta{color:var(--muted);font-size:.9rem}@media(max-width:480px){h1{font-size:1.7rem}main,.topbar{padding:1rem}ul,ol{padding-left:1.15rem}}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="topbar" aria-label="Language and navigation"><a href="https://braindiggeruz.github.io/awesome-uzbek-ai/">Catalog</a> <a href="https://braindiggeruz.github.io/awesome-uzbek-ai/evaluations/" hreflang="en" lang="en" aria-current="page">English</a></nav>
+<main id="main">
+<h1 id="uzbek-ai-evaluation-starter-pack">Uzbek AI Evaluation Starter Pack</h1>
+<p><strong>24 original, synthetic prompt cases. No models have been run, tested, ranked, or scored with this pack.</strong></p>
+<p>Version: 0.1.0. Authored: 2026-10-08. This is a small, open inspection set for reproducible Uzbek-language checks, not a validated benchmark or a leaderboard. The content was AI-assisted and self-reviewed; independent native-speaker or expert review has not been completed.</p>
+<p>Oʻzbekcha: bu toʻplam lotin va kirill yozuvi, apostroflar, ruscha-oʻzbekcha aralash xabarlar, mijoz bilan yozishmalar va aniq koʻrsatmalarga rioya qilishni tekshirish uchun tayyorlangan. Namunalar sunʼiy; ular haqiqiy mijoz yozishmalari emas.</p>
+<h2 id="what-it-covers">What it covers</h2>
+<p>Each category has three cases:</p>
+<div class="table-wrap" role="region" aria-label="Comparison table" tabindex="0"><table><thead><tr>
+<th scope="col">Category</th>
+<th scope="col">IDs</th>
+<th scope="col">Focus</th>
+</tr></thead><tbody>
+<tr><td>script_conversion</td><td>001–003</td><td>Uzbek Latin/Cyrillic conversion; oʻ, gʻ, q, x, h, sh, ch</td></tr>
+<tr><td>apostrophes</td><td>004–006</td><td>Explicit Unicode normalization; tutuq; keeping distinct words distinct</td></tr>
+<tr><td>mixed_ru_uz</td><td>007–009</td><td>Russian–Uzbek mixed messages, extraction, negation</td></tr>
+<tr><td>business_dialogue</td><td>010–012</td><td>Prices, stock uncertainty, delayed orders without invented promises</td></tr>
+<tr><td>instruction_adherence</td><td>013–015</td><td>JSON, line format, instructions quoted inside data</td></tr>
+<tr><td>name_number_preservation</td><td>016–018</td><td>Names, leading zeros, identifiers, decimal comma, protected script</td></tr>
+<tr><td>grounded_abstention</td><td>019–021</td><td>Missing facts, unknown source recency, selective abstention</td></tr>
+<tr><td>structured_reasoning</td><td>022–024</td><td>Simple totals, elapsed time, rule-based selection</td></tr>
+</tbody></table></div>
+<p>The full IDs are <code>uz-eval-001</code> through <code>uz-eval-024</code>. All facts necessary for answers are in the prompts. No provider, product, crawler, or website is rewarded. There are no promotional links in the test cases.</p>
+<h2 id="files">Files</h2>
+<ul>
+<li><a href="https://github.com/braindiggeruz/awesome-uzbek-ai/blob/main/evaluations/prompts.jsonl">prompts.jsonl</a>: UTF-8, one JSON object per line
+</li>
+<li><a href="https://braindiggeruz.github.io/awesome-uzbek-ai/evaluations/rubric/">rubric.md</a>: exact comparison rules, manual grading, limitations, reporting
+</li>
+<li><a href="https://github.com/braindiggeruz/awesome-uzbek-ai/blob/main/evaluations/tools/validate.py">tools/validate.py</a>: Python standard-library validation and safe blank-run generation
+</li></ul>
+<p>The files need no API key, paid service, package installation, or network access. Model inference, if you choose to perform it later, may have a separate cost depending on the runner you select. The included script never calls a model or submits data anywhere. Reuse follows the repository's license; the pack introduces no separate paywall or access restriction.</p>
+<h2 id="record-format">Record format</h2>
+<p>Each record has six top-level fields:</p>
+<ul>
+<li><code>id</code>: stable case identifier
+</li>
+<li><code>category</code>: one of the eight categories above
+</li>
+<li><code>language</code>: input-language notation; <code>+</code> means the input is mixed, not a formal combined BCP 47 tag
+</li>
+<li><code>input</code>: the exact user message to send to the model
+</li>
+<li><code>expected_or_rubric</code>: <code>exact_text</code>, <code>json</code>, or <code>checklist</code> grading specification
+</li>
+<li><code>notes</code>: evaluator-only context and edge cases
+</li></ul>
+<p>Input tags include <code>uz-Latn</code>, <code>uz-Cyrl</code>, <code>ru-Cyrl</code>, and <code>en</code>. The requested output language is stated inside each prompt. Do not send the expected answers, checklists, notes, or this documentation to the model.</p>
+<h2 id="quick-local-check">Quick local check</h2>
+<p>From the directory containing this README:</p>
+<pre><code class="language-bash">python3 tools/validate.py validate
+python3 tools/validate.py init-run ./runs/my-first-run</code></pre>
+<p>The first command validates UTF-8 JSONL structure, unique IDs, exactly 24 cases, three cases in each category, and grading-specification structure. It prints the corpus SHA-256. It does not establish linguistic correctness or model quality.</p>
+<p>The second command creates <code>metadata.json</code> and <code>responses.jsonl</code> in the chosen directory, with every result marked <code>not_run</code> and every output set to <code>null</code>. It refuses to overwrite either file. File creation is preparation only: it does not run or score a model.</p>
+<p>After recording outputs, check the response-file structure:</p>
+<pre><code class="language-bash">python3 tools/validate.py check-responses ./runs/my-first-run/responses.jsonl</code></pre>
+<p>This checks completeness, IDs, statuses, and value types. It does not grade answer correctness. Keep run files out of public commits unless you intend to publish them and have checked them for unintended private data.</p>
+<h2 id="manual-or-local-model-run-procedure">Manual or local-model run procedure</h2>
+<ol>
+<li>Freeze the corpus version, SHA-256, and repository commit. Read the rubric before running. Do not change acceptable answers after seeing which model produced them.
+</li>
+<li>Fill in the generated metadata: provider or local runner, exact model identifier, version/snapshot when available, UTC start date/time, interface/version, system instructions, tool access, and every exposed generation setting. For a local model also record weight revision, quantization, runtime version, and chat template. Use <code>unknown</code> or <code>not exposed</code> when necessary; never invent a version.
+</li>
+<li>Use a new conversation or reset context for each case. Send the <code>input</code> value verbatim as one user message, with no examples or answer key. The core run uses no browsing, retrieval, or other tools. If your interface adds unavoidable defaults, record them.
+</li>
+<li>Use one predeclared first attempt per case for a basic run. Where supported, a reasonable controlled setting is temperature 0, an output cap of at least 1024 tokens, and a fixed seed. Record actual settings, including unsupported controls. These settings do not guarantee identical outputs across runs.
+</li>
+<li>Save the exact visible final response to <code>raw_output</code>; preserve Unicode, whitespace, JSON formatting, and any unwanted preamble. Set <code>status</code> to <code>completed</code> only when a model response exists. Record time and any truncation. Do not repair the answer before grading or collect private chain-of-thought.
+</li>
+<li>On a transport or runner failure, use <code>status: &quot;error&quot;</code>, <code>raw_output: null</code>, and a short non-secret error description. Do not treat unavailable infrastructure as a model's incorrect answer. Preserve errors if rerunning; identify a new run or attempt instead of silently replacing a poor answer.
+</li>
+<li>Apply <a href="https://braindiggeruz.github.io/awesome-uzbek-ai/evaluations/rubric/">the rubric</a>, recording each result and evidence. Have a qualified Uzbek reviewer resolve linguistic uncertainty before publishing comparative claims. Blind the rater to model identity where practical.
+</li>
+<li>Report case-level outcomes, per-category counts, coverage, and limitations. Publish a full-pack pass rate only with 24 completed, graded cases under the same declared protocol. For partial work, show the completed/graded denominator and missing or error cases prominently.
+</li></ol>
+<p>A no-cost starting point is a manual run in an interface you already have access to, or an already-installed local model. No particular provider or hosted API is required or recommended by the test design.</p>
+<h2 id="writing-and-comparison-conventions">Writing and comparison conventions</h2>
+<p>This version deliberately uses the familiar apostrophe-based Latin forms <code>oʻ</code>, <code>gʻ</code>, <code>sh</code>, and <code>ch</code>, together with Uzbek Cyrillic. It is a versioned test convention, not a claim about the present legal status of alphabet reforms. Future writing-system changes should create a documented new version rather than silently changing an answer key.</p>
+<p>Most linguistic comparisons accept common apostrophe glyph variants at the same position. They never remove apostrophes or equate <code>ot</code> with <code>oʻt</code>. Case 004 explicitly requests two Unicode code points; cases 016 and 017 explicitly preserve source strings. Those exact-character requirements must remain strict.</p>
+<p>Script conversion is not always a context-free character substitution: borrowed words, names, and choices around е/ё/ю/я or signs can be ambiguous. These starter cases deliberately avoid many of those issues. For open-ended responses, accept natural equivalent Uzbek wording under the stated checks rather than requiring the example answer verbatim. See the rubric for details.</p>
+<h2 id="source-and-provenance">Source and provenance</h2>
+<p>The prompts and fictional scenarios are original material, not scraped customer conversations. No sensitive customer data, credentials, phone numbers, or real transaction records are included. Names and order codes are synthetic; any resemblance is incidental.</p>
+<p>The <a href="https://lex.uz/docs/1625271">1995 basic Uzbek spelling rules on LexUZ</a> were consulted as a language reference for the apostrophe-based convention, the tutuq distinction, and letter spellings. This is not a claim of endorsement, legal review, or complete current-policy coverage. The exact Unicode convention in case 004 is specified by that prompt itself.</p>
+<h2 id="limits-and-contributions">Limits and contributions</h2>
+<p>Twenty-four public examples cannot establish broad Uzbek fluency, dialect coverage, speech quality, domain expertise, fairness, safety, or production readiness. These are short written tasks, mostly standard Uzbek, with only a small amount of Russian code-switching. They do not represent all regional or colloquial usage. Public examples may enter training data; use a separate private, independently reviewed holdout for serious comparisons.</p>
+<p>Useful improvements include independently reviewed language corrections, additional regional examples with explicit acceptance rules, and documented failure cases. Preserve old IDs when correcting wording without changing the task; increment the version and document any answer-changing revision. Add new IDs for substantially different tasks. Report disputed judgments instead of forcing a single spelling preference into a model ranking.</p>
+<footer><p>Content is dedicated under CC0 1.0. Suggest corrections through GitHub issues or pull requests. <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></p>
+<p><a href="https://github.com/braindiggeruz/awesome-uzbek-ai/blob/main/evaluations/README.md">Source on GitHub</a> · <a href="https://github.com/braindiggeruz/awesome-uzbek-ai/issues">Issues</a></p></footer>
+</main>
+</body>
+</html>

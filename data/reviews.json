@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "meaning": "Targeted content observations only. This is not a claim that every catalog entry was reviewed or that a service was tested.",
+  "reviews": [
+    {
+      "resource_url": "https://gptbot.uz/uz/gpt-uzbek-tilida/",
+      "reviewed_on": "2026-10-08",
+      "method": "Read the provider's public Uzbek service page; no login, payment or model testing.",
+      "evidence_urls": ["https://gptbot.uz/uz/gpt-uzbek-tilida/"],
+      "observation": "The terms describe a total three-response trial, while other passages still mention daily/hourly limits. The catalog therefore does not promise a particular quota or price.",
+      "affiliation": "GPTBot.uz also maintains this catalog.",
+      "limitations": "Provider statement only. Runtime enforcement, answer quality and paid terms were not independently verified."
+    }
+  ]
+}
