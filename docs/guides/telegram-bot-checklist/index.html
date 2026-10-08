@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Telegram AI bot launch checklist: privacy, reliability and cost</title>
+<meta name="description" content="Practical pre-launch checks for Telegram AI bots: data, permissions, budgets, retries and human handoff.">
+<link rel="canonical" href="https://braindiggeruz.github.io/awesome-uzbek-ai/guides/telegram-bot-checklist/">
+<link rel="alternate" hreflang="en" href="https://braindiggeruz.github.io/awesome-uzbek-ai/guides/telegram-bot-checklist/">
+<link rel="alternate" hreflang="uz" href="https://braindiggeruz.github.io/awesome-uzbek-ai/uz/guides/telegram-bot-checklist/">
+<link rel="alternate" hreflang="x-default" href="https://braindiggeruz.github.io/awesome-uzbek-ai/guides/telegram-bot-checklist/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Telegram AI bot launch checklist: privacy, reliability and cost">
+<meta property="og:description" content="Practical pre-launch checks for Telegram AI bots: data, permissions, budgets, retries and human handoff.">
+<meta property="og:url" content="https://braindiggeruz.github.io/awesome-uzbek-ai/guides/telegram-bot-checklist/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "name": "Telegram AI bot launch checklist: privacy, reliability and cost", "description": "Practical pre-launch checks for Telegram AI bots: data, permissions, budgets, retries and human handoff.", "url": "https://braindiggeruz.github.io/awesome-uzbek-ai/guides/telegram-bot-checklist/", "inLanguage": "en", "license": "https://creativecommons.org/publicdomain/zero/1.0/"}</script>
+<style>:root{--bg:#fbfbf8;--fg:#1d1f1e;--muted:#525b55;--line:#d5ddd5;--link:#075e8c;--accent:#08684f;--code:#edf1eb}
+@media(prefers-color-scheme:dark){:root{--bg:#141716;--fg:#e8ebe7;--muted:#b3bcb5;--line:#414c43;--link:#8bcdf4;--accent:#6ad7ad;--code:#252e28}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-padding-top:1rem}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+main,.topbar{max-width:58rem;margin:0 auto;padding:1.25rem}main{padding-bottom:3rem}.topbar{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;border-bottom:1px solid var(--line)}.topbar a{padding:.25rem 0}.topbar [aria-current]{font-weight:700}
+h1{font-size:2.1rem;line-height:1.2;margin:.8rem 0 1rem}h2{font-size:1.45rem;margin-top:2.5rem;border-top:1px solid var(--line);padding-top:.8rem}h3{font-size:1.15rem;margin-top:1.8rem;color:var(--accent)}p,li,h1,h2,h3{overflow-wrap:anywhere}a{color:var(--link);text-underline-offset:.18em}a:hover{text-decoration-thickness:.15em}a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);outline-offset:4px}ul,ol{padding-left:1.4rem}li{margin:.5rem 0}li li{margin:.25rem 0}code{font:.9em ui-monospace,monospace;background:var(--code);padding:.1em .3em;border-radius:3px}pre{overflow:auto;padding:1rem;background:var(--code);border-radius:6px}pre code{padding:0}blockquote{margin:1rem 0;padding:.1rem 1rem;border-left:3px solid var(--accent);color:var(--muted)}.table-wrap{overflow-x:auto}table{border-collapse:collapse;min-width:100%}th,td{text-align:left;vertical-align:top;border:1px solid var(--line);padding:.6rem}th{background:var(--code)}footer{margin-top:3rem;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}.skip{position:absolute;left:1rem;top:-10rem;background:var(--bg);padding:.6rem;z-index:2}.skip:focus{top:.5rem}.meta{color:var(--muted);font-size:.9rem}@media(max-width:480px){h1{font-size:1.7rem}main,.topbar{padding:1rem}ul,ol{padding-left:1.15rem}}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="topbar" aria-label="Language and navigation"><a href="https://braindiggeruz.github.io/awesome-uzbek-ai/">Catalog</a> <a href="https://braindiggeruz.github.io/awesome-uzbek-ai/guides/telegram-bot-checklist/" hreflang="en" lang="en" aria-current="page">English</a> <a href="https://braindiggeruz.github.io/awesome-uzbek-ai/uz/guides/telegram-bot-checklist/" hreflang="uz" lang="uz">O‘zbekcha</a></nav>
+<main id="main">
+<h1 id="launching-an-uzbek-telegram-bot-a-practical-checklist">Launching an Uzbek Telegram bot: a practical checklist</h1>
+<p><a href="https://braindiggeruz.github.io/awesome-uzbek-ai/uz/guides/telegram-bot-checklist/">O‘zbekcha</a> · <a href="https://braindiggeruz.github.io/awesome-uzbek-ai/">Resource catalogue</a> · <a href="https://braindiggeruz.github.io/awesome-uzbek-ai/guides/choosing-uzbek-ai/">Choosing Uzbek AI</a></p>
+<p>Use this checklist before inviting real users to an Uzbek or Uzbek–Russian bot. It covers a small first release, including an optional AI component. It is a planning and acceptance guide, not a claim that any particular bot has passed these checks.</p>
+<h2 id="1-define-one-complete-user-journey">1. Define one complete user journey</h2>
+<p>Write down what a user should be able to finish: ask a documented question, submit a request, check an order, or book an available slot. Describe the starting point, required information, confirmation, saved result and next responsible person.</p>
+<ul>
+<li>Name the person who owns the bot, its content, technical support and ongoing costs.
+</li>
+<li>Separate facts and actions that must be deterministic from open-ended language tasks. Keep stock, prices, permissions and order status in the authoritative business system.
+</li>
+<li>Decide which actions need user confirmation. Show the actual details before creating a booking, changing a record or taking payment.
+</li>
+<li>Define when the bot asks a clarifying question, offers a human handoff, or says it cannot help.
+</li>
+<li>Keep a short list of features excluded from the first release. This makes testing and estimates more meaningful.
+</li></ul>
+<h2 id="2-set-up-ownership-and-protect-credentials">2. Set up ownership and protect credentials</h2>
+<p>Create and manage the bot through the official <a href="https://t.me/BotFather">BotFather</a>. Telegram's <a href="https://core.telegram.org/bots/tutorial#obtain-your-bot-token">bot tutorial</a> explains token creation and revocation. Treat a bot token like a password.</p>
+<ul>
+<li>Keep the production bot under an account controlled by the responsible owner; document how maintenance access will be handed over.
+</li>
+<li>Use separate test and production bots, credentials and data.
+</li>
+<li>Store bot tokens and model API keys in a secret store or protected runtime configuration. Never put them in source code, screenshots, public issues or client-side JavaScript.
+</li>
+<li>Redact credentials from logs and error reports, including URLs that contain tokens.
+</li>
+<li>Revoke an exposed token and replace it in the deployment. Removing it from a file does not invalidate a leaked copy.
+</li>
+<li>Give administrators only the access needed for their role.
+</li></ul>
+<h2 id="3-prepare-uzbek-content-and-boundaries">3. Prepare Uzbek content and boundaries</h2>
+<ul>
+<li>Offer a clear language choice. Preserve that choice across menus, errors and later messages.
+</li>
+<li>Test Uzbek Latin and Cyrillic, common apostrophe variants, mixed Uzbek–Russian wording, names and place names. Do not infer a person's preferred language from their name.
+</li>
+<li>Keep button labels short and consistent. Make “Back”, “Cancel” and “Talk to a person” behave predictably wherever they appear.
+</li>
+<li>Give an AI component approved reference material, with an owner and a review date. Test questions that the material cannot answer.
+</li>
+<li>Have a proficient Uzbek reader review important text. Mark examples as examples; do not publish invented testimonials, customer stories or evaluation results.
+</li>
+<li>Treat user messages and retrieved documents as untrusted input. Test attempts to make the bot expose another user's data, reveal secrets or perform an unauthorised action. Enforce permissions in application code, not only in a prompt.
+</li></ul>
+<p>For model or service selection, use the <a href="https://braindiggeruz.github.io/awesome-uzbek-ai/guides/choosing-uzbek-ai/">AI guide</a> and <a href="https://braindiggeruz.github.io/awesome-uzbek-ai/evaluations/">evaluation kit</a>.</p>
+<h2 id="4-make-message-processing-recoverable">4. Make message processing recoverable</h2>
+<p>Choose either long polling or webhooks; Telegram does not allow both simultaneously. For webhooks, validate the <code>X-Telegram-Bot-Api-Secret-Token</code> header configured with <code>secret_token</code>. Use <code>update_id</code> to recognise repeated updates. These behaviours are documented in the <a href="https://core.telegram.org/bots/api#getting-updates">Bot API</a>.</p>
+<ul>
+<li>Record an update durably before acknowledging it when losing that update would lose a request or order.
+</li>
+<li>Make repeated deliveries and button taps safe: one intended action should create one business record. Use an application-level idempotency key for consequential writes.
+</li>
+<li>Put slow model calls and integration work in a bounded queue. Define timeouts, retry limits and a clear message when work cannot finish.
+</li>
+<li>Retry transient failures without creating duplicate bookings, charges or notifications. Distinguish “failed” from “result unknown”.
+</li>
+<li>Handle malformed input, unsupported attachments, blocked-bot errors and service outages without crashing the worker.
+</li>
+<li>Queue outgoing messages and handle rate-limit responses. Check Telegram's current <a href="https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this">messaging limits</a> rather than hard-coding an assumed unlimited rate.
+</li>
+<li>If the bot is used in groups, verify which messages it receives under its actual permissions and <a href="https://core.telegram.org/bots/faq#what-messages-will-my-bot-get">privacy mode</a>.
+</li></ul>
+<h2 id="5-make-data-handling-understandable">5. Make data handling understandable</h2>
+<p>Before asking for information, tell the user what is needed and why. Identify the bot operator and how to contact support. Explain if messages are sent to a model provider or another business system.</p>
+<ul>
+<li>Collect only the fields needed for the task. Use fictional data for development and acceptance tests.
+</li>
+<li>Define storage location, access roles, retention period and deletion procedure. Test deletion rather than merely promising it.
+</li>
+<li>Avoid logging full messages and attachments by default. Keep enough redacted diagnostic information to investigate failures.
+</li>
+<li>Separate consent for a requested service from consent for promotional messages. Provide a working way to stop optional notifications.
+</li>
+<li>Confirm that one user's history, documents and business records cannot appear in another user's chat.
+</li>
+<li>If taking payments, check Telegram’s separate documentation for <a href="https://core.telegram.org/bots/payments">physical goods and services</a> and <a href="https://core.telegram.org/bots/payments-stars">digital goods and services</a> before choosing the flow. Verify payment state on the backend; a screenshot or client-side success message is not proof of payment.
+</li></ul>
+<h2 id="6-run-an-acceptance-test-with-recorded-evidence">6. Run an acceptance test with recorded evidence</h2>
+<p>For each case, save the date, version, input, expected outcome, actual outcome and reviewer. The cases below are a starting point, not measured results or a complete security audit.</p>
+<ul>
+<li><strong>First visit:</strong> <code>/start</code> explains the bot, presents the language choice and reaches the main task.
+</li>
+<li><strong>Language switch:</strong> switching language also updates later validation errors and confirmation messages.
+</li>
+<li><strong>Missing information:</strong> an incomplete request triggers a focused question instead of a fabricated answer.
+</li>
+<li><strong>Back and cancel:</strong> navigation restores a sensible state; cancellation does not create a business record.
+</li>
+<li><strong>Repeated action:</strong> a double tap, retry or duplicated update creates no duplicate order, lead or booking.
+</li>
+<li><strong>AI uncertainty:</strong> an unsupported question receives a clear limitation or human handoff, without invented prices, availability or policy.
+</li>
+<li><strong>Isolation:</strong> two test users cannot access each other's history or records, including by guessing an identifier.
+</li>
+<li><strong>Failure and restart:</strong> model timeout, CRM outage and worker restart leave a recoverable state and a truthful status message.
+</li>
+<li><strong>Human handoff:</strong> the designated person actually receives the request with the necessary context, and the user knows what happens next.
+</li>
+<li><strong>Abuse and spending:</strong> unusually long inputs and repeated requests trigger your configured limits without exposing private information.
+</li></ul>
+<p>For payments or other consequential actions, add separate tests for duplicate callbacks, cancellation and an uncertain result. Do not launch that feature until its recovery process is clear.</p>
+<h2 id="7-separate-build-cost-from-running-cost">7. Separate build cost from running cost</h2>
+<p>Ask for a breakdown based on your scope, not a single unexplained “bot price”:</p>
+<ul>
+<li><strong>One-time work:</strong> journey design, Uzbek localisation, integrations, implementation, testing, deployment and handover.
+</li>
+<li><strong>Recurring infrastructure:</strong> hosting, database, file storage, backups and monitoring.
+</li>
+<li><strong>AI usage:</strong> input and output volume, retained conversation context, document retrieval, speech processing and retries where relevant.
+</li>
+<li><strong>Other providers:</strong> CRM subscriptions, paid APIs, payment fees and any required licences.
+</li>
+<li><strong>People:</strong> support, content updates, incident handling and later improvements.
+</li>
+<li><strong>Assumptions:</strong> expected conversations, peak load, languages, included features, tax treatment and who pays each provider.
+</li></ul>
+<p>Use low, expected and high usage scenarios. Replace assumptions with actual pilot usage before increasing the audience, and set spending alerts and a hard application-level limit where possible.</p>
+<p>For a worked scope breakdown, the Russian-language <a href="https://gptbot.uz/ru/kalkulyator-stoimosti-telegram-bota/">Telegram bot cost calculator</a> separates development and estimated infrastructure costs. <strong>Disclosure:</strong> it is operated by GPTBot.uz, the team maintaining this catalogue. Its ranges are that team's planning estimates, not market benchmarks or a binding quote. Compare independent proposals using the same scope and exclusions; check model/API usage and other subscriptions separately.</p>
+<h2 id="8-launch-with-an-owner-and-a-rollback-plan">8. Launch with an owner and a rollback plan</h2>
+<ul>
+<li>Start with a small, agreed pilot audience and a defined review point.
+</li>
+<li>Record the version deployed, test evidence and unresolved limitations.
+</li>
+<li>Monitor failed requests, response time, handoffs and spending. For webhooks, inspect pending updates and delivery errors through <a href="https://core.telegram.org/bots/api#getwebhookinfo">getWebhookInfo</a>.
+</li>
+<li>Assign someone to receive alerts and decide when to pause the bot.
+</li>
+<li>Keep a tested way to disable consequential actions, switch to a human-support message and restore a known-good version.
+</li>
+<li>After an incident, fix the cause and rerun the affected tests before reopening the feature.
+</li></ul>
+<p>Do not mark the bot ready while credentials are exposed, user data crosses accounts, consequential actions can duplicate, or nobody owns failures. A working happy-path demo is only one part of launch readiness.</p>
+<h2 id="about-this-guide">About this guide</h2>
+<p>Prepared on 8 October 2026; Telegram-specific references and the calculator page were checked on that date. Provider behaviour and terms can change. GPTBot.uz is independent and is not affiliated with OpenAI or Telegram.</p>
+<p>The repository's <a href="https://github.com/braindiggeruz/awesome-uzbek-ai/blob/main/LICENSE">CC0 licence</a> applies to its own content. External services and software retain their own terms. Send corrections through the <a href="https://github.com/braindiggeruz/awesome-uzbek-ai/blob/main/CONTRIBUTING.md">contribution guidelines</a>.</p>
+<footer><p>Content is dedicated under CC0 1.0. Suggest corrections through GitHub issues or pull requests. <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></p>
+<p><a href="https://github.com/braindiggeruz/awesome-uzbek-ai/blob/main/guides/telegram-bot-checklist.md">Source on GitHub</a> · <a href="https://github.com/braindiggeruz/awesome-uzbek-ai/issues">Issues</a></p></footer>
+</main>
+</body>
+</html>

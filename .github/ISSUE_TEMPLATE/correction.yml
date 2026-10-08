@@ -1,0 +1,20 @@
+name: Report a correction or broken link
+description: Describe a reproducible content, translation or availability problem.
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Entry or page URL
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: Observation, date and expected correction
+      description: Include primary evidence. Distinguish a 404 from login requirements, rate limits or bot blocking.
+    validations:
+      required: true
+  - type: input
+    id: affiliation
+    attributes:
+      label: Your affiliation with the resource, if any

@@ -1,0 +1,40 @@
+name: Suggest or update a resource
+description: Propose a useful Uzbek AI resource with primary evidence.
+title: "Resource: "
+body:
+  - type: input
+    id: resource
+    attributes:
+      label: Resource name and official URL
+    validations:
+      required: true
+  - type: textarea
+    id: use
+    attributes:
+      label: Uzbek use case and proposed factual description
+      description: Explain who it helps. Avoid rankings or marketing language.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Primary evidence and date checked
+      description: Link the official documentation, repository or card. State the date and exact claim checked, including license or price if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: affiliation
+    attributes:
+      label: Affiliation and limitations
+      description: State your relationship to the project (or none), any access requirements, and anything you could not verify.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched for duplicates and included no referral/tracking links.
+          required: true
+        - label: I have not included credentials or private customer information.
+          required: true

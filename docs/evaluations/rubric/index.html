@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uzbek AI evaluation rubric and limitations</title>
+<meta name="description" content="Scoring instructions, reproducibility requirements and limitations for the original Uzbek AI smoke-test pack.">
+<link rel="canonical" href="https://braindiggeruz.github.io/awesome-uzbek-ai/evaluations/rubric/">
+
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Uzbek AI evaluation rubric and limitations">
+<meta property="og:description" content="Scoring instructions, reproducibility requirements and limitations for the original Uzbek AI smoke-test pack.">
+<meta property="og:url" content="https://braindiggeruz.github.io/awesome-uzbek-ai/evaluations/rubric/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "name": "Uzbek AI evaluation rubric and limitations", "description": "Scoring instructions, reproducibility requirements and limitations for the original Uzbek AI smoke-test pack.", "url": "https://braindiggeruz.github.io/awesome-uzbek-ai/evaluations/rubric/", "inLanguage": "en", "license": "https://creativecommons.org/publicdomain/zero/1.0/"}</script>
+<style>:root{--bg:#fbfbf8;--fg:#1d1f1e;--muted:#525b55;--line:#d5ddd5;--link:#075e8c;--accent:#08684f;--code:#edf1eb}
+@media(prefers-color-scheme:dark){:root{--bg:#141716;--fg:#e8ebe7;--muted:#b3bcb5;--line:#414c43;--link:#8bcdf4;--accent:#6ad7ad;--code:#252e28}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-padding-top:1rem}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+main,.topbar{max-width:58rem;margin:0 auto;padding:1.25rem}main{padding-bottom:3rem}.topbar{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;border-bottom:1px solid var(--line)}.topbar a{padding:.25rem 0}.topbar [aria-current]{font-weight:700}
+h1{font-size:2.1rem;line-height:1.2;margin:.8rem 0 1rem}h2{font-size:1.45rem;margin-top:2.5rem;border-top:1px solid var(--line);padding-top:.8rem}h3{font-size:1.15rem;margin-top:1.8rem;color:var(--accent)}p,li,h1,h2,h3{overflow-wrap:anywhere}a{color:var(--link);text-underline-offset:.18em}a:hover{text-decoration-thickness:.15em}a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);outline-offset:4px}ul,ol{padding-left:1.4rem}li{margin:.5rem 0}li li{margin:.25rem 0}code{font:.9em ui-monospace,monospace;background:var(--code);padding:.1em .3em;border-radius:3px}pre{overflow:auto;padding:1rem;background:var(--code);border-radius:6px}pre code{padding:0}blockquote{margin:1rem 0;padding:.1rem 1rem;border-left:3px solid var(--accent);color:var(--muted)}.table-wrap{overflow-x:auto}table{border-collapse:collapse;min-width:100%}th,td{text-align:left;vertical-align:top;border:1px solid var(--line);padding:.6rem}th{background:var(--code)}footer{margin-top:3rem;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}.skip{position:absolute;left:1rem;top:-10rem;background:var(--bg);padding:.6rem;z-index:2}.skip:focus{top:.5rem}.meta{color:var(--muted);font-size:.9rem}@media(max-width:480px){h1{font-size:1.7rem}main,.topbar{padding:1rem}ul,ol{padding-left:1.15rem}}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="topbar" aria-label="Language and navigation"><a href="https://braindiggeruz.github.io/awesome-uzbek-ai/">Catalog</a> <a href="https://braindiggeruz.github.io/awesome-uzbek-ai/evaluations/rubric/" hreflang="en" lang="en" aria-current="page">English</a></nav>
+<main id="main">
+<h1 id="grading-rubric">Grading rubric</h1>
+<p><strong>Status: no model has been evaluated with this pack. There are no empirical scores to report.</strong></p>
+<p>Use this rubric with version 0.1.0 of <a href="https://github.com/braindiggeruz/awesome-uzbek-ai/blob/main/evaluations/prompts.jsonl">prompts.jsonl</a>. The schema validator checks file integrity; it is not an automatic linguistic grader.</p>
+<h2 id="common-rules">Common rules</h2>
+<ul>
+<li>Grade only the exact response saved in <code>raw_output</code> against its case. Do not use model identity, reputation, price, speed, or provider preference to decide correctness.
+</li>
+<li>Read the entire prompt and its notes. Keep strict output requirements separate from subjective style preferences. A polite, natural equivalent is valid when a checklist permits it.
+</li>
+<li>Keep all expected facts, protected names, numbers, negation, and uncertainty. Unsupported factual additions fail a relevant checklist check even when the prose is fluent.
+</li>
+<li>Extra introductions, explanations, Markdown fences, or apologies fail an exact-output contract. Do not silently remove them.
+</li>
+<li>Leading and trailing response whitespace, CRLF versus LF line endings, and Unicode NFC normalization are harmless unless a prompt explicitly says otherwise. Do not collapse internal whitespace, delete punctuation, reorder sentences, or normalize away meaningful characters.
+</li>
+<li>Missing output or an infrastructure error is ungraded and reduces coverage. A model-produced refusal, blank answer, wrong-language response, or truncated answer is an actual completed attempt; grade it against the prompt and record any truncation.
+</li>
+<li>If a genuinely valid answer exposes an answer-key ambiguity, mark it <code>needs_review</code>, explain the issue, and resolve it consistently across every model before publishing an aggregate. Do not label it a failure merely because it differs from a reference.
+</li></ul>
+<h2 id="exact-text-cases">Exact-text cases</h2>
+<p>An <code>exact_text</code> specification contains <code>expected</code> and <code>normalization</code>.</p>
+<ol>
+<li>Normalize both texts to NFC.
+</li>
+<li>Convert CRLF and CR to LF and trim only whitespace around the entire response.
+</li>
+<li>For <code>nfc_trim</code>, compare all remaining characters exactly.
+</li>
+<li>For <code>apostrophe_equivalent</code>, first map the five glyphs below to ASCII <code>&#x27;</code>, then compare all remaining characters exactly. Do not remove any sign.
+</li></ol>
+<p>Accepted equivalent glyphs for this mode:</p>
+<div class="table-wrap" role="region" aria-label="Comparison table" tabindex="0"><table><thead><tr>
+<th scope="col">Glyph</th>
+<th scope="col">Code point</th>
+<th scope="col">Name</th>
+</tr></thead><tbody>
+<tr><td>'</td><td>U+0027</td><td>APOSTROPHE</td></tr>
+<tr><td>‘</td><td>U+2018</td><td>LEFT SINGLE QUOTATION MARK</td></tr>
+<tr><td>’</td><td>U+2019</td><td>RIGHT SINGLE QUOTATION MARK</td></tr>
+<tr><td>ʻ</td><td>U+02BB</td><td>MODIFIER LETTER TURNED COMMA</td></tr>
+<tr><td>ʼ</td><td>U+02BC</td><td>MODIFIER LETTER APOSTROPHE</td></tr>
+</tbody></table></div>
+<p>The equivalence applies only to cases that enable it. It is a narrow comparison convenience, not a general spelling rule. A grave accent/backtick, inserted spaces inside words, missing signs, or a different letter are not automatically equivalent. If an additional glyph should be accepted, document a versioned rule before comparison rather than making a provider-specific exception.</p>
+<p>Case 004 must distinguish <code>ʻ</code> U+02BB in Oʻ/Gʻ from <code>ʼ</code> U+02BC in tutuq words because the prompt asks for those exact code points. NFC alone does not merge these characters. Cases 001 and 003 require the requested Uzbek Cyrillic letters, including ҳ rather than х when appropriate.</p>
+<h2 id="json-cases">JSON cases</h2>
+<p>A <code>json</code> specification contains <code>expected</code>, <code>string_normalization</code>, and <code>extra_keys: false</code>.</p>
+<ul>
+<li>Parse the entire output as one valid JSON value; surrounding whitespace is fine. Markdown fences and trailing commentary are not valid output for these cases.
+</li>
+<li>Reject duplicate object keys; a permissive parser silently keeping the last value would conceal a contract violation. Reject non-standard <code>NaN</code> and <code>Infinity</code>.
+</li>
+<li>Object key order and formatting whitespace outside strings do not matter. Array order does matter.
+</li>
+<li>Match the expected keys exactly, with no extra or missing keys. Do not normalize key spellings.
+</li>
+<li>Preserve JSON types. Strings are not numbers; <code>null</code> is not <code>&quot;null&quot;</code>; booleans must not be treated as numeric 0/1. Integer-only requests require a JSON integer token, not a decimal or exponent-form token.
+</li>
+<li>Compare string values after NFC normalization. For <code>string_normalization: &quot;apostrophe_equivalent&quot;</code>, additionally fold the five listed glyphs. Never trim or collapse whitespace inside a JSON string.
+</li>
+<li>Case 017 intentionally uses <code>string_normalization: &quot;nfc&quot;</code>: the source value <code>1 250 000 soʻm</code> and the initial zeros in <code>000731</code> must remain intact.
+</li></ul>
+<p>The expected JSON values in this version are small objects or arrays with no open-ended wording. In case 008 the prompt supplies the permitted payment labels, so an evaluator need not guess which synonyms to accept.</p>
+<h2 id="checklist-cases">Checklist cases</h2>
+<p>A <code>checklist</code> specification contains numbered <code>checks</code> and an illustrative <code>reference_answer</code>.</p>
+<p>Grade each check as <code>pass</code>, <code>fail</code>, or <code>needs_review</code>. Add a short note quoting the relevant response segment or stating what is missing. The reference answer is one possible answer, never an exclusive wording requirement.</p>
+<ul>
+<li>Accept normal Uzbek paraphrases and ordinary apostrophe glyph variants unless the prompt protects a literal string.
+</li>
+<li>A response can use widely used borrowed words such as <code>kuryer</code> when appropriate. “Fully Uzbek” does not mean banning established loanwords. It does mean translating the Russian fragments and using the requested script.
+</li>
+<li>Do not penalize a natural difference in politeness formula, pronoun omission, or sentence order unless the prompt constrains it.
+</li>
+<li>For a two-sentence instruction, count full sentences in the visible answer. A semicolon does not create another sentence; a colon can introduce a phrase in the same sentence. Count questions or exclamations as sentences too. If abbreviations or malformed punctuation make the count genuinely ambiguous, flag review rather than rely on splitting on every period.
+</li>
+<li>“No added facts” still permits greetings or politeness when the requested sentence count and other constraints are satisfied. It forbids invented stock, dates, causes, commitments, and actions.
+</li>
+<li>Case 016 protects the exact string <code>Gʻayrat Joʻrayev</code>; do not change its apostrophe code points. In case 018, the protected Cyrillic name remains Cyrillic even though the rest of the answer is Latin. Obey the case-specific instruction before applying a blanket script rule.
+</li>
+<li>For grounded uncertainty, distinguish “not supplied” from “false.” An unknown stock level is not zero stock. Undated records do not establish which schedule is current. In case 021, only the unsupported holiday field should be <code>null</code>.
+</li></ul>
+<p>Linguistic judgments should be independently reviewed by qualified Uzbek readers before comparative publication. Record actual reviewers and qualifications only when known; this pack does not claim such review has already happened.</p>
+<h2 id="case-outcome-and-aggregation">Case outcome and aggregation</h2>
+<p>Use these case outcomes:</p>
+<ul>
+<li><code>pass</code>: the exact/JSON comparison passes, or every checklist check passes
+</li>
+<li><code>fail</code>: the output exists and violates at least one unambiguous required check
+</li>
+<li><code>needs_review</code>: an unresolved linguistic or answer-key ambiguity prevents a fair decision
+</li>
+<li><code>ungraded</code>: no completed output exists or no grading has been done
+</li></ul>
+<p>The main measure is strict case success, not an impressionistic fluency score. A checklist case with three passing checks and one failing check is a case failure; retain the check-level results as diagnostics. Do not mix a fraction of checks with whole-case pass counts in the same metric.</p>
+<p>For a fully completed and adjudicated run:</p>
+<ul>
+<li>Full-pack success rate = passing cases / 24
+</li>
+<li>Each category success rate = passing cases / 3
+</li>
+<li>Always show the counts alongside percentages. With only three examples per category, one case changes a category rate by one third.
+</li></ul>
+<p>If any cases are missing, errored, ungraded, or under review, report coverage and outcomes rather than a purported full-pack score. A partial result may say “P passes / G graded completed cases; C of 24 responses collected; R cases under review,” using actual observed values. Do not put placeholder numbers in a leaderboard.</p>
+<p>Do not claim statistical significance, broad capability superiority, or real-world reliability from this starter set. A single overall number hides different failure modes; show category and case-level evidence.</p>
+<h2 id="repeated-runs-and-fair-comparison">Repeated runs and fair comparison</h2>
+<p>Declare repeated-run policy before collecting outputs. Use the same number of attempts, context reset, settings, tool policy, and scoring for every compared system. Never choose each model's best response after the fact.</p>
+<p>Keep each repeated run in a separate directory with its own metadata and corpus hash. If the model is nondeterministic, report variation across runs. A seed and temperature 0 are useful controls when available, but they are not a reproducibility guarantee. Interface-specific hidden instructions and model updates can remain confounds; disclose them.</p>
+<p>Do not use the tested model as its own sole judge. If using another model to assist grading later, record its identity and judging prompt, blind model names where possible, and have humans adjudicate uncertain language cases. No automated judge is included or run here.</p>
+<h2 id="recording-outputs-and-judgments">Recording outputs and judgments</h2>
+<p><code>tools/validate.py init-run PATH</code> creates metadata and 24 blank response records. Fill the metadata before inference; keep all fields even when their values are <code>unknown</code>, <code>not exposed</code>, or <code>not applicable</code>.</p>
+<p>For each response, record:</p>
+<ul>
+<li>Stable <code>case_id</code>, attempt number, status, and UTC collection time
+</li>
+<li><code>raw_output</code> exactly as returned, or <code>null</code> for a not-run/error case
+</li>
+<li>Short <code>error</code> text only for infrastructure failure; omit credentials or private service details
+</li>
+<li>Whether the output was truncated
+</li>
+<li><code>grading</code> with outcome, reviewer identifier, check-level judgments when applicable, and short evidence/notes
+</li></ul>
+<p>The blank template has <code>grading: null</code>. When grading is done, use an object with <code>outcome</code>, <code>reviewer</code>, <code>checks</code>, and <code>notes</code>. <code>checks</code> is an object keyed by C1/C2/etc. for checklist cases, or by <code>comparison</code> for exact-text/JSON cases. Each value is <code>pass</code>, <code>fail</code>, or <code>needs_review</code>. This is a recording convention, not a fabricated result.</p>
+<p>Keep a copy of the original response and preserve any subsequent grading corrections as a documented revision. Do not save private chain-of-thought or unrelated account data.</p>
+<h2 id="when-to-revise-the-pack">When to revise the pack</h2>
+<p>Record an issue when a prompt admits multiple valid answers that its grading rules cannot handle, when a supposedly natural sentence is disputed, or when an exact-character check measures typography more than the intended skill. Review changes blind to model identity where possible. Version answer-key changes and rerun comparisons against the same version; do not compare old and new scores as if the tasks were unchanged.</p>
+<footer><p>Content is dedicated under CC0 1.0. Suggest corrections through GitHub issues or pull requests. <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></p>
+<p><a href="https://github.com/braindiggeruz/awesome-uzbek-ai/blob/main/evaluations/rubric.md">Source on GitHub</a> · <a href="https://github.com/braindiggeruz/awesome-uzbek-ai/issues">Issues</a></p></footer>
+</main>
+</body>
+</html>
